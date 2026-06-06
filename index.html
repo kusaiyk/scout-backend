@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scout Campers – احصل على أفضل سعر | Best Deal in the USA</title>
+  <meta name="description" content="احصل على Scout Camper الأمريكي بأفضل سعر مضمون. سجّل بريدك واحصل على العرض حصرياً." />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green: #2d6a2d;
+      --green-light: #3d8c3d;
+      --gold: #c8a84b;
+      --dark: #1a1a1a;
+      --text: #222;
+      --muted: #555;
+      --bg: #f8f6f1;
+      --white: #fff;
+    }
+
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, #1a2e1a 0%, #2d6a2d 60%, #1a3a1a 100%);
+      color: white;
+      padding: 60px 24px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('https://scoutcampers.com/wp-content/uploads/2024/01/Scout-Kenai-PU-2024-lifestyle-1.jpg') center/cover no-repeat;
+      opacity: 0.18;
+    }
+    .hero-inner { position: relative; max-width: 720px; margin: auto; }
+
+    .badge {
+      display: inline-block;
+      background: var(--gold);
+      color: #1a1a1a;
+      font-weight: 700;
+      font-size: 13px;
+      padding: 4px 16px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    .hero h1 {
+      font-size: clamp(28px, 6vw, 52px);
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .hero h1 span { color: var(--gold); }
+
+    .hero-sub {
+      font-size: clamp(15px, 3vw, 20px);
+      opacity: 0.88;
+      margin-bottom: 10px;
+    }
+    .hero-en {
+      font-size: 15px;
+      opacity: 0.6;
+      margin-bottom: 36px;
+      font-style: italic;
+    }
+
+    /* ── FEATURES ── */
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+      max-width: 800px;
+      margin: 0 auto 50px;
+      padding: 0 16px;
+    }
+    .feat {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 12px;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .feat .icon { font-size: 22px; }
+
+    /* ── FORM SECTION ── */
+    .form-section {
+      background: white;
+      border-radius: 24px;
+      max-width: 520px;
+      margin: -40px auto 0;
+      position: relative;
+      padding: 36px 32px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.13);
+    }
+
+    .form-section h2 {
+      font-size: 22px;
+      font-weight: 800;
+      margin-bottom: 6px;
+      color: var(--dark);
+    }
+    .form-section p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+
+    .form-group { margin-bottom: 16px; }
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 13px 16px;
+      border: 2px solid #e0ddd5;
+      border-radius: 10px;
+      font-family: 'Cairo', sans-serif;
+      font-size: 15px;
+      color: var(--text);
+      background: var(--bg);
+      transition: border-color 0.2s;
+      text-align: right;
+    }
+    .form-group input:focus, .form-group select:focus {
+      outline: none;
+      border-color: var(--green);
+      background: white;
+    }
+
+    .btn-submit {
+      width: 100%;
+      background: linear-gradient(135deg, var(--green), var(--green-light));
+      color: white;
+      border: none;
+      border-radius: 12px;
+      padding: 16px;
+      font-family: 'Cairo', sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      cursor: pointer;
+      margin-top: 8px;
+      transition: transform 0.15s, box-shadow 0.15s;
+      box-shadow: 0 4px 20px rgba(45,106,45,0.35);
+    }
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 28px rgba(45,106,45,0.45);
+    }
+
+    .trust-note {
+      text-align: center;
+      font-size: 12px;
+      color: #999;
+      margin-top: 12px;
+    }
+    .trust-note span { color: var(--green); font-weight: 600; }
+
+    /* ── MODELS ── */
+    .section { max-width: 900px; margin: 64px auto; padding: 0 24px; }
+    .section-title {
+      text-align: center;
+      font-size: 26px;
+      font-weight: 900;
+      margin-bottom: 32px;
+      color: var(--dark);
+    }
+    .section-title span { color: var(--green); }
+
+    .models-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 24px;
+    }
+    .model-card {
+      background: white;
+      border-radius: 18px;
+      overflow: hidden;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      border: 2px solid transparent;
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+    .model-card:hover {
+      border-color: var(--green);
+      transform: translateY(-5px);
+      box-shadow: 0 12px 36px rgba(45,106,45,0.15);
+    }
+    .model-card .model-img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+      background: #e8e4dc;
+    }
+    .model-card .model-body { padding: 16px 18px 20px; }
+    .model-card h3 { font-size: 17px; font-weight: 800; margin-bottom: 6px; }
+    .model-card .price {
+      font-size: 18px;
+      color: var(--green);
+      font-weight: 900;
+      margin-bottom: 4px;
+    }
+    .model-card .price-en { font-size: 12px; color: var(--muted); }
+    .model-card .btn-model {
+      display: inline-block;
+      margin-top: 12px;
+      background: var(--green);
+      color: white;
+      font-family: 'Cairo', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 7px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .model-card .btn-model:hover { background: var(--green-light); }
+
+
+    /* ── WHY ── */
+    .why-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .why-item {
+      background: white;
+      border-radius: 14px;
+      padding: 22px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .why-item .wi-icon {
+      font-size: 28px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .why-item h4 { font-size: 15px; font-weight: 800; margin-bottom: 4px; }
+    .why-item p { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+    /* ── FOOTER CTA ── */
+    .footer-cta {
+      background: linear-gradient(135deg, var(--dark), #2a2a2a);
+      color: white;
+      text-align: center;
+      padding: 60px 24px;
+      margin-top: 80px;
+    }
+    .footer-cta h2 { font-size: 26px; font-weight: 900; margin-bottom: 10px; }
+    .footer-cta p { font-size: 15px; opacity: 0.7; margin-bottom: 28px; }
+    .footer-cta .btn-cta {
+      display: inline-block;
+      background: var(--gold);
+      color: #1a1a1a;
+      font-family: 'Cairo', sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      padding: 14px 40px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: transform 0.15s;
+    }
+    .footer-cta .btn-cta:hover { transform: scale(1.04); }
+
+    .footer-note {
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      color: #aaa;
+    }
+
+    /* ── SUCCESS STATE ── */
+    #success-msg {
+      display: none;
+      text-align: center;
+      padding: 20px 0;
+    }
+    #success-msg .check { font-size: 56px; margin-bottom: 12px; }
+    #success-msg h3 { font-size: 22px; font-weight: 900; color: var(--green); margin-bottom: 8px; }
+    #success-msg p { color: var(--muted); font-size: 14px; margin-bottom: 20px; }
+    #success-msg .btn-go {
+      display: inline-block;
+      background: var(--green);
+      color: white;
+      padding: 14px 32px;
+      border-radius: 12px;
+      font-family: 'Cairo', sans-serif;
+      font-weight: 800;
+      font-size: 16px;
+      text-decoration: none;
+    }
+
+    @media (max-width: 560px) {
+      .form-section { margin: -30px 16px 0; padding: 28px 20px; }
+      .hero { padding: 50px 16px 70px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ HERO ══ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="badge">🇺🇸 منتج أمريكي أصلي · Authentic USA Product</div>
+    <h1>امتلك <span>Scout Camper</span><br/>بأفضل سعر مضمون</h1>
+    <p class="hero-sub">المركبة التخييمية الأمريكية الأفضل للمغامرين — الآن في متناولك</p>
+    <p class="hero-en">America's best truck camper — now accessible to you directly</p>
+
+    <div class="features">
+      <div class="feat"><span class="icon">🏕️</span> مثالي للطبيعة والمغامرة</div>
+      <div class="feat"><span class="icon">🚛</span> يناسب معظم بيكابات</div>
+      <div class="feat"><span class="icon">💰</span> أسعار تبدأ من $17,990</div>
+      <div class="feat"><span class="icon">✅</span> نساعدك تأمن الصفقة</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FORM CARD ══ -->
+<div class="form-section">
+  <div id="form-content">
+    <h2>سجّل واحصل على عرضك الخاص</h2>
+    <p>سنتواصل معك مباشرة بأفضل سعر وتفاصيل الشحن · We'll reach out with pricing & shipping details</p>
+
+    <!--
+      SETUP: Replace YOUR_BACKEND_URL below with your Railway URL after deployment
+      e.g. action="https://scout-backend.up.railway.app/submit"
+    -->
+    <form id="lead-form" action="https://scout-backend-production-19aa.up.railway.app/submit" method="POST">
+      <div class="form-group">
+        <label>الاسم الكامل · Full Name</label>
+        <input type="text" name="name" placeholder="أدخل اسمك" required />
+      </div>
+      <div class="form-group">
+        <label>البريد الإلكتروني · Email</label>
+        <input type="email" name="email" placeholder="example@email.com" required />
+      </div>
+      <div class="form-group">
+        <label>رقم الواتساب · WhatsApp Number</label>
+        <input type="tel" name="whatsapp" placeholder="+966 5xx xxx xxxx" />
+      </div>
+      <div class="form-group">
+        <label>الموديل المفضّل · Preferred Model</label>
+        <select name="model">
+          <option value="">-- اختر / Choose --</option>
+          <option value="Tuktut">Scout Tuktut — من $17,990</option>
+          <option value="Yoho">Scout Yoho — من $24,990</option>
+          <option value="Olympic">Scout Olympic — من $26,990</option>
+          <option value="Kenai">Scout Kenai — من $29,990</option>
+          <option value="not-sure">لم أقرر بعد / Not sure yet</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>الدولة / الموقع المطلوب · Desired Location</label>
+        <select name="location" required>
+          <option value="">-- اختر دولتك / Choose your country --</option>
+          <optgroup label="الخليج العربي">
+            <option value="Saudi Arabia">🇸🇦 المملكة العربية السعودية</option>
+            <option value="UAE">🇦🇪 الإمارات العربية المتحدة</option>
+            <option value="Kuwait">🇰🇼 الكويت</option>
+            <option value="Qatar">🇶🇦 قطر</option>
+            <option value="Bahrain">🇧🇭 البحرين</option>
+            <option value="Oman">🇴🇲 عُمان</option>
+          </optgroup>
+          <optgroup label="المشرق والشمال الأفريقي">
+            <option value="Jordan">🇯🇴 الأردن</option>
+            <option value="Egypt">🇪🇬 مصر</option>
+            <option value="Lebanon">🇱🇧 لبنان</option>
+            <option value="Morocco">🇲🇦 المغرب</option>
+            <option value="Tunisia">🇹🇳 تونس</option>
+            <option value="Algeria">🇩🇿 الجزائر</option>
+            <option value="Libya">🇱🇾 ليبيا</option>
+          </optgroup>
+          <optgroup label="أخرى">
+            <option value="USA">🇺🇸 الولايات المتحدة (USA)</option>
+            <option value="Other">دولة أخرى / Other</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <button type="submit" class="btn-submit">احصل على العرض الآن 🚀</button>
+    </form>
+
+    <p class="trust-note">🔒 بياناتك محمية · <span>لن نشارك معلوماتك مع أي طرف ثالث</span></p>
+  </div>
+
+  <!-- Success state (shown after submit) -->
+  <div id="success-msg">
+    <div class="check">✅</div>
+    <h3>تم التسجيل بنجاح!</h3>
+    <p>سنتواصل معك خلال 24 ساعة بأفضل عرض وتفاصيل الشحن.<br/>
+    <em>We'll contact you within 24 hours with the best deal.</em></p>
+    <a href="https://scoutcampers.com" class="btn-go" target="_blank">تصفّح الموديلات الآن →</a>
+  </div>
+</div>
+
+<!-- ══ MODELS ══ -->
+<section class="section">
+  <h2 class="section-title">الموديلات المتاحة <span>2026</span></h2>
+  <div class="models-grid">
+    <div class="model-card">
+      <img class="model-img" src="https://scoutcampers.com/wp-content/uploads/2024/05/Scout-Tuktut-2024-Rendering-14-1024x768.jpg" alt="Scout Tuktut" loading="lazy" />
+      <div class="model-body">
+        <h3>Scout Tuktut</h3>
+        <div class="price">من $17,990</div>
+        <div class="price-en">Mid-size trucks · Compact · 577 lbs</div>
+        <a href="https://scoutcampers.com/hard-wall/tuktut/" target="_blank" class="btn-model">تفاصيل الموديل →</a>
+      </div>
+    </div>
+    <div class="model-card">
+      <img class="model-img" src="https://scoutcampers.com/wp-content/uploads/2024/05/Scout-Yoho-2024-Rendering-1-1024x768.jpg" alt="Scout Yoho" loading="lazy" />
+      <div class="model-body">
+        <h3>Scout Yoho</h3>
+        <div class="price">من $24,990</div>
+        <div class="price-en">Short bed · Hard side · Solar included</div>
+        <a href="https://scoutcampers.com/hard-wall/yoho/" target="_blank" class="btn-model">تفاصيل الموديل →</a>
+      </div>
+    </div>
+    <div class="model-card">
+      <img class="model-img" src="https://scoutcampers.com/wp-content/uploads/2024/05/Scout-Olympic-2024-Rendering-1-1024x768.jpg" alt="Scout Olympic" loading="lazy" />
+      <div class="model-body">
+        <h3>Scout Olympic</h3>
+        <div class="price">من $26,990</div>
+        <div class="price-en">Short bed · 4-person dinette · Off-road</div>
+        <a href="https://scoutcampers.com/hard-wall/olympic/" target="_blank" class="btn-model">تفاصيل الموديل →</a>
+      </div>
+    </div>
+    <div class="model-card">
+      <img class="model-img" src="https://scoutcampers.com/wp-content/uploads/2024/05/Scout-Kenai-2024-Rendering-3-1024x768.jpg" alt="Scout Kenai" loading="lazy" />
+      <div class="model-body">
+        <h3>Scout Kenai</h3>
+        <div class="price">من $29,990</div>
+        <div class="price-en">Long & short bed · Full wet bath</div>
+        <a href="https://scoutcampers.com/hard-wall/kenai/" target="_blank" class="btn-model">تفاصيل الموديل →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ WHY US ══ -->
+<section class="section">
+  <h2 class="section-title">لماذا <span>تتواصل معنا؟</span></h2>
+  <div class="why-list">
+    <div class="why-item">
+      <div class="wi-icon">🤝</div>
+      <div>
+        <h4>وسيط موثوق داخل أمريكا</h4>
+        <p>نحن نتفاوض نيابةً عنك مع الوكلاء الأمريكيين ونضمن لك أفضل سعر ممكن.</p>
+      </div>
+    </div>
+    <div class="why-item">
+      <div class="wi-icon">📦</div>
+      <div>
+        <h4>ندير العملية من أولها لآخرها</h4>
+        <p>من التفاوض والشراء إلى الشحن والتخليص — كل شيء بيدنا.</p>
+      </div>
+    </div>
+    <div class="why-item">
+      <div class="wi-icon">💬</div>
+      <div>
+        <h4>تواصل بالعربي</h4>
+        <p>لا حاجة للإنجليزية — كل التواصل مع الوكلاء يتم عبرنا بلغتك.</p>
+      </div>
+    </div>
+    <div class="why-item">
+      <div class="wi-icon">💰</div>
+      <div>
+        <h4>أسعار تنافسية</h4>
+        <p>سواء أردت السعر الأصلي أو ترتيب صفقة مخصصة، نجد لك الخيار الأنسب.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER CTA ══ -->
+<div class="footer-cta">
+  <h2>جاهز للمغامرة؟ 🏔️</h2>
+  <p>سجّل الآن وسنتواصل معك بأفضل عرض خلال 24 ساعة</p>
+  <a href="#" class="btn-cta" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">سجّل بريدك الآن ↑</a>
+</div>
+
+<div class="footer-note">
+  © 2026 · Scout Campers Broker · للاستفسار راسلنا على واتساب
+</div>
+
+<script>
+  const form = document.getElementById('lead-form');
+  const formContent = document.getElementById('form-content');
+  const successMsg = document.getElementById('success-msg');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('.btn-submit');
+    btn.textContent = 'جاري الإرسال...';
+    btn.disabled = true;
+
+    try {
+      const data = new FormData(form);
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        formContent.style.display = 'none';
+        successMsg.style.display = 'block';
+        // Redirect to Scout Campers site after 4 seconds
+        setTimeout(() => {
+          window.open('https://scoutcampers.com', '_blank');
+        }, 4000);
+      } else {
+        btn.textContent = 'حدث خطأ — حاول مرة أخرى';
+        btn.disabled = false;
+      }
+    } catch {
+      btn.textContent = 'حدث خطأ — حاول مرة أخرى';
+      btn.disabled = false;
+    }
+  });
+</script>
+
+</body>
+</html>
