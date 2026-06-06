@@ -530,10 +530,6 @@
       if (res.ok) {
         formContent.style.display = 'none';
         successMsg.style.display = 'block';
-        // Redirect to Scout Campers site after 4 seconds
-        setTimeout(() => {
-          window.open('https://scoutcampers.com', '_blank');
-        }, 4000);
       } else {
         btn.textContent = 'حدث خطأ — حاول مرة أخرى';
         btn.disabled = false;
