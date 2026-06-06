@@ -1,25 +1,32 @@
 const express = require('express');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
-const Database = require('better-sqlite3');
+const fs = require('fs');
 const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// ── DATABASE SETUP ──────────────────────────────────────────
-const db = new Database(path.join(__dirname, 'leads.db'));
-db.exec(`
-  CREATE TABLE IF NOT EXISTS leads (
-    id        INTEGER PRIMARY KEY AUTOINCREMENT,
-    name      TEXT,
-    email     TEXT NOT NULL,
-    whatsapp  TEXT,
-    model     TEXT,
-    location  TEXT,
-    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
-  )
-`);
+// ── DATA STORAGE (JSON file — no native deps) ────────────────
+const DATA_FILE = path.join('/tmp', 'leads.json');
+
+function loadLeads() {
+  try {
+    if (fs.existsSync(DATA_FILE)) {
+      return JSON.parse(fs.readFileSync(DATA_FILE, 'utf8'));
+    }
+  } catch (e) { console.error('loadLeads error:', e.message); }
+  return [];
+}
+
+function saveLead(lead) {
+  const leads = loadLeads();
+  lead.id = leads.length + 1;
+  lead.created_at = new Date().toISOString().replace('T', ' ').slice(0, 19);
+  leads.unshift(lead);
+  fs.writeFileSync(DATA_FILE, JSON.stringify(leads, null, 2));
+  return lead;
+}
 
 // ── MIDDLEWARE ───────────────────────────────────────────────
 app.use(cors());
@@ -34,7 +41,7 @@ async function sendNotification(lead) {
     service: 'gmail',
     auth: {
       user: process.env.GMAIL_USER,
-      pass: process.env.GMAIL_PASS, // Gmail App Password
+      pass: process.env.GMAIL_PASS,
     },
   });
 
@@ -74,14 +81,10 @@ app.post('/submit', async (req, res) => {
     return res.status(400).json({ error: 'Email is required' });
   }
 
-  // Save lead to database
-  const stmt = db.prepare(
-    'INSERT INTO leads (name, email, whatsapp, model, location) VALUES (?, ?, ?, ?, ?)'
-  );
-  stmt.run(name || '', email, whatsapp || '', model || '', location || '');
+  const lead = saveLead({ name: name || '', email, whatsapp: whatsapp || '', model: model || '', location: location || '' });
 
   // Send email notification (non-blocking)
-  sendNotification({ name, email, whatsapp, model, location }).catch(console.error);
+  sendNotification(lead).catch(console.error);
 
   res.json({ success: true });
 });
@@ -102,7 +105,7 @@ app.get('/admin', (req, res) => {
     `);
   }
 
-  const leads = db.prepare('SELECT * FROM leads ORDER BY created_at DESC').all();
+  const leads = loadLeads();
 
   const rows = leads.map(l => `
     <tr>
@@ -153,8 +156,7 @@ app.get('/admin/csv', (req, res) => {
     return res.status(401).send('Unauthorized');
   }
 
-  const leads = db.prepare('SELECT * FROM leads ORDER BY created_at DESC').all();
-
+  const leads = loadLeads();
   const escape = (val) => `"${String(val || '').replace(/"/g, '""')}"`;
   const csv = [
     'ID,Name,Email,WhatsApp,Model,Location,Date',
